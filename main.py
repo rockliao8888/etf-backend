@@ -3,6 +3,9 @@ import requests
 import pandas as pd
 
 app = FastAPI()
+@app.get("/")
+def home():
+    return {"message": "API OK"}
 
 def fetch_data():
     url = "https://www.twse.com.tw/rwd/zh/ETF/getEtfQuote"
